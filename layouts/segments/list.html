@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="segment-header">
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Params.description }}</p>
+</div>
+
+<div class="episodes-list">
+    {{ range .Pages }}
+    <article class="episode-card">
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <p class="episode-date">{{ .Date.Format "January 2, 2006" }}</p>
+        <p>{{ .Summary }}</p>
+        {{ if .Params.songs }}
+        <p class="song-count">{{ len .Params.songs }} songs featured</p>
+        {{ end }}
+    </article>
+    {{ end }}
+</div>
+{{ end }}

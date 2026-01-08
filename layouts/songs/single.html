@@ -1,0 +1,99 @@
+{{ define "main" }}
+<article class="song-page">
+    <header class="song-header">
+        <h1>{{ .Title }}</h1>
+        <p class="artist">{{ .Params.artist }}</p>
+    </header>
+
+    <section class="song-metadata">
+        <h2>Song Information</h2>
+        <dl>
+            {{ with .Params.composer }}
+            <dt>Composer</dt>
+            <dd>{{ . }}</dd>
+            {{ end }}
+            
+            {{ with .Params.lyricist }}
+            <dt>Lyricist</dt>
+            <dd>{{ . }}</dd>
+            {{ end }}
+            
+            {{ with .Params.singers }}
+            <dt>Singer(s)</dt>
+            <dd>{{ delimit . ", " }}</dd>
+            {{ end }}
+            
+            {{ with .Params.year }}
+            <dt>Year</dt>
+            <dd>{{ . }}</dd>
+            {{ end }}
+            
+            {{ with .Params.language }}
+            <dt>Language</dt>
+            <dd>{{ . }}</dd>
+            {{ end }}
+            
+            {{ with .Params.related_artists }}
+            <dt>Related Artists</dt>
+            <dd>{{ delimit . ", " }}</dd>
+            {{ end }}
+        </dl>
+    </section>
+
+    {{ if .Params.listen_links }}
+    <section class="listen-links">
+        <h2>Listen Now</h2>
+        <ul>
+            {{ range .Params.listen_links }}
+            <li><a href="{{ .url }}" target="_blank" rel="noopener">{{ .platform }}</a></li>
+            {{ end }}
+        </ul>
+    </section>
+    {{ end }}
+
+    {{ if .Params.lyrics }}
+    <section class="lyrics-section">
+        <h2>Lyrics{{ if .Params.language }} ({{ .Params.language }}){{ end }}</h2>
+        
+        {{ if eq .Params.language "English" }}
+        <!-- Simple English lyrics -->
+        <div class="lyrics-simple">
+            {{ range .Params.lyrics }}
+            <p>{{ .line }}</p>
+            {{ end }}
+        </div>
+        {{ else }}
+        <!-- Transliterated lyrics with word-by-word translation -->
+        <div class="lyrics-translated">
+            {{ range .Params.lyrics }}
+            <div class="lyric-block">
+                <!-- Original language words -->
+                <div class="lyric-row original">
+                    {{ range .words }}
+                    <span class="word">{{ .original }}</span>
+                    {{ end }}
+                </div>
+                
+                <!-- English translation of each word -->
+                <div class="lyric-row translation">
+                    {{ range .words }}
+                    <span class="word">{{ .translation }}</span>
+                    {{ end }}
+                </div>
+                
+                <!-- Reordered English sentence -->
+                <div class="lyric-row english">
+                    {{ .english_line }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        {{ end }}
+    </section>
+    {{ end }}
+
+    <div class="song-content">
+        {{ .Content }}
+    </div>
+</article>
+{{ end }}

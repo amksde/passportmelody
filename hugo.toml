@@ -1,0 +1,12 @@
+baseURL = "https://passportmelody.com/"
+languageCode = "en-us"
+title = "PassportMelody - Global Music Discovery"
+
+[params]
+  description = "Discover and explore music from around the world"
+  author = "PassportMelody"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

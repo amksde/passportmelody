@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="hero">
+    <h1>Discover Global Music</h1>
+    <p>Your passport to melodies from around the world</p>
+</div>
+
+<div class="segments-grid">
+    {{ range (where .Site.Pages "Section" "segments") }}
+        {{ if eq .Kind "section" }}
+        <div class="segment-card">
+            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <p>{{ .Params.description }}</p>
+            <span class="episode-count">{{ len .Pages }} episodes</span>
+        </div>
+        {{ end }}
+    {{ end }}
+</div>
+{{ end }}

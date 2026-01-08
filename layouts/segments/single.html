@@ -1,0 +1,27 @@
+{{ define "main" }}
+<article class="episode">
+    <header>
+        <h1>{{ .Title }}</h1>
+        <p class="episode-date">{{ .Date.Format "January 2, 2006" }}</p>
+    </header>
+
+    <div class="episode-content">
+        {{ .Content }}
+    </div>
+
+    {{ if .Params.songs }}
+    <section class="featured-songs">
+        <h2>Featured Songs</h2>
+        <ul class="song-list">
+            {{ range .Params.songs }}
+            <li class="song-item">
+                <a href="/songs/{{ .slug }}/">
+                    <strong>{{ .title }}</strong> - {{ .artist }}
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+    </section>
+    {{ end }}
+</article>
+{{ end }}
