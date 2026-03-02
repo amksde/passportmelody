@@ -1,14 +1,18 @@
-/* PassportMelody CSS - Inspired by clean serif design */
+/* PassportMelody CSS - Warm aesthetic design */
+/* @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 :root {
-  --color-bg: #ffffff;
-  --color-text: #333333;
-  --color-light-gray: #f5f5f5;
-  --color-medium-gray: #e0e0e0;
-  --color-dark-gray: #757575;
-  --font-serif: 'Merriweather', Georgia, serif;
+  --color-bg: #fffbf5;
+  --color-text: #1a1a1a;
+  --color-light: #fff4e6;
+  --color-medium: #ffd9a0;
+  --color-accent: #ff8c42;
+  --color-dark-accent: #d96f2f;
+  /* --font-serif: 'Libre Caslon Text', Georgia, 'Times New Roman', Times, serif;*/
   --content-width: 900px;
+  --font-serif: 'Libre Baskerville', Georgia, 'Times New Roman', Times, serif;
   --content-padding: 2rem;
-  --body-font-size: 16px;
+  --body-font-size: 17px;
 }
 
 * {
@@ -20,15 +24,14 @@
 body {
   font-family: var(--font-serif);
   font-size: var(--body-font-size);
-  line-height: 1.7;
+  line-height: 1.65;
   color: var(--color-text);
   background-color: var(--color-bg);
 }
 
-/* Header */
 header {
   background-color: var(--color-bg);
-  border-bottom: 1px solid var(--color-medium-gray);
+  border-bottom: 2px solid var(--color-medium);
   padding: 1rem 0;
 }
 
@@ -47,10 +50,9 @@ header h1 a {
   color: var(--color-text);
   text-decoration: none;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
-/* Main content */
 main {
   width: 100%;
   max-width: var(--content-width);
@@ -58,93 +60,138 @@ main {
   padding: 2rem var(--content-padding);
 }
 
+/* Breadcrumbs */
+.breadcrumbs {
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  content: "›";
+  margin: 0 0.5rem;
+  color: var(--color-dark-accent);
+}
+
+.breadcrumbs a {
+  color: var(--color-dark-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumbs a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.breadcrumbs .active {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
 /* Hero section */
 .hero {
-  background-color: var(--color-light-gray);
-  padding: 2rem;
+  background: linear-gradient(135deg, var(--color-light) 0%, var(--color-medium) 100%);
+  padding: 2.5rem;
   margin-bottom: 3rem;
-  border-radius: 4px;
+  border-radius: 8px;
   text-align: center;
+  border: 1px solid var(--color-medium);
 }
 
 .hero h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin: 0 0 0.5rem 0;
   color: var(--color-text);
+  font-weight: 600;
 }
 
 .hero p {
-  font-size: 1.1rem;
-  color: var(--color-dark-gray);
+  font-size: 1.15rem;
+  color: var(--color-dark-accent);
   margin: 0;
-  font-style: italic;
+  font-weight: 400;
 }
 
 /* Segments grid */
 .segments-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
   margin-bottom: 3rem;
 }
 
 .segment-card {
-  background-color: var(--color-light-gray);
+  display: block;
+  background-color: var(--color-light);
+  border: 2px solid var(--color-medium);
+  border-radius: 8px;
   padding: 1.5rem;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease;
 }
 
 .segment-card:hover {
-  background-color: var(--color-medium-gray);
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 140, 66, 0.15);
 }
 
 .segment-card h2 {
   margin: 0 0 0.5rem 0;
   font-size: 1.4rem;
-}
-
-.segment-card h2 a {
   color: var(--color-text);
-  text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .segment-card p {
-  color: var(--color-dark-gray);
+  color: var(--color-dark-accent);
   margin: 0.5rem 0;
   font-size: 0.95rem;
 }
 
 .episode-count {
   display: inline-block;
-  background-color: var(--color-text);
+  background-color: var(--color-accent);
   color: var(--color-bg);
-  padding: 0.3rem 0.6rem;
+  padding: 0.3rem 0.7rem;
   font-size: 0.8rem;
-  border-radius: 3px;
+  border-radius: 4px;
   margin-top: 0.5rem;
   font-weight: 500;
 }
 
 /* Segment header */
 .segment-header {
-  background-color: var(--color-light-gray);
+  background: linear-gradient(135deg, var(--color-light) 0%, var(--color-medium) 100%);
   padding: 2rem;
   margin-bottom: 2rem;
-  border-radius: 4px;
+  border-radius: 8px;
+  border: 1px solid var(--color-medium);
 }
 
 .segment-header h1 {
   margin: 0 0 0.5rem 0;
   font-size: 2rem;
+  font-weight: 600;
 }
 
 .segment-header p {
-  color: var(--color-dark-gray);
+  color: var(--color-dark-accent);
   margin: 0;
   font-size: 1.1rem;
-  font-style: italic;
 }
 
 /* Episodes list */
@@ -154,28 +201,31 @@ main {
 }
 
 .episode-card {
-  background-color: var(--color-light-gray);
+  display: block;
+  background-color: var(--color-light);
   padding: 1.5rem;
-  border-radius: 4px;
+  border-radius: 8px;
+  border: 2px solid var(--color-medium);
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.episode-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 140, 66, 0.15);
 }
 
 .episode-card h2 {
   margin: 0 0 0.5rem 0;
   font-size: 1.4rem;
-}
-
-.episode-card h2 a {
-  color: var(--color-text);
-  text-decoration: none;
   font-weight: 600;
-}
-
-.episode-card h2 a:hover {
-  text-decoration: underline;
+  color: var(--color-text);
 }
 
 .episode-date {
-  color: var(--color-dark-gray);
+  color: var(--color-dark-accent);
   font-size: 0.85rem;
   margin: 0.3rem 0 0.8rem 0;
 }
@@ -185,20 +235,26 @@ main {
 }
 
 .song-count {
-  font-size: 0.9rem;
-  color: var(--color-dark-gray);
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--color-dark-accent);
+  background-color: var(--color-bg);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  margin-top: 0.5rem;
 }
 
 /* Featured songs section */
 .featured-songs {
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid var(--color-medium-gray);
+  border-top: 2px solid var(--color-medium);
 }
 
 .featured-songs h2 {
   font-size: 1.4rem;
   margin: 0 0 1rem 0;
+  font-weight: 600;
 }
 
 .song-list {
@@ -208,14 +264,16 @@ main {
 
 .song-item {
   margin: 0.8rem 0;
-  padding: 0.8rem;
+  padding: 1rem;
   background-color: var(--color-bg);
-  border-left: 3px solid var(--color-dark-gray);
-  transition: border-color 0.2s ease;
+  border-left: 4px solid var(--color-accent);
+  border-radius: 4px;
+  transition: all 0.2s ease;
 }
 
 .song-item:hover {
-  border-left-color: var(--color-text);
+  background-color: var(--color-light);
+  border-left-color: var(--color-dark-accent);
 }
 
 .song-item a {
@@ -225,12 +283,12 @@ main {
 }
 
 .song-item a:hover {
-  text-decoration: underline;
+  color: var(--color-accent);
 }
 
 .song-item strong {
   color: var(--color-text);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /* Song page */
@@ -239,23 +297,25 @@ main {
 }
 
 .song-header {
-  background-color: var(--color-light-gray);
+  background: linear-gradient(135deg, var(--color-light) 0%, var(--color-medium) 100%);
   padding: 2rem;
   margin-bottom: 2rem;
-  border-radius: 4px;
+  border-radius: 8px;
+  border: 1px solid var(--color-medium);
 }
 
 .song-header h1 {
   margin: 0 0 0.5rem 0;
   font-size: 2rem;
   color: var(--color-text);
+  font-weight: 600;
 }
 
 .artist {
   font-size: 1.2rem;
-  color: var(--color-dark-gray);
+  color: var(--color-dark-accent);
   margin: 0;
-  font-style: italic;
+  font-weight: 500;
 }
 
 /* Song metadata */
@@ -266,6 +326,7 @@ main {
 .song-metadata h2 {
   font-size: 1.4rem;
   margin: 0 0 1rem 0;
+  font-weight: 600;
 }
 
 .song-metadata dl {
@@ -276,8 +337,8 @@ main {
 }
 
 .song-metadata dt {
-  font-weight: 700;
-  color: var(--color-dark-gray);
+  font-weight: 600;
+  color: var(--color-dark-accent);
 }
 
 .song-metadata dd {
@@ -292,6 +353,7 @@ main {
 .listen-links h2 {
   font-size: 1.4rem;
   margin: 0 0 1rem 0;
+  font-weight: 600;
 }
 
 .listen-links ul {
@@ -303,29 +365,30 @@ main {
 
 .listen-links a {
   display: inline-block;
-  background-color: var(--color-text);
+  background-color: var(--color-accent);
   color: var(--color-bg);
-  padding: 0.6rem 1.2rem;
+  padding: 0.7rem 1.3rem;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 6px;
   font-weight: 500;
   transition: background-color 0.2s ease;
 }
 
 .listen-links a:hover {
-  background-color: var(--color-dark-gray);
+  background-color: var(--color-dark-accent);
 }
 
 /* Lyrics section */
 .lyrics-section {
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 1px solid var(--color-medium-gray);
+  border-top: 2px solid var(--color-medium);
 }
 
 .lyrics-section h2 {
   font-size: 1.4rem;
   margin: 0 0 1.5rem 0;
+  font-weight: 600;
 }
 
 .lyrics-simple p {
@@ -341,8 +404,9 @@ main {
 .lyric-block {
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background-color: var(--color-light-gray);
-  border-radius: 4px;
+  background-color: var(--color-light);
+  border-radius: 8px;
+  border: 1px solid var(--color-medium);
 }
 
 .lyric-row {
@@ -352,53 +416,64 @@ main {
   flex-wrap: wrap;
 }
 
-.lyric-row.original .word {
-  background-color: var(--color-medium-gray);
+.lyric-row.original-script .word {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  padding: 0.5rem 0.8rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: 2px solid var(--color-medium);
+  border-radius: 4px;
+}
+
+.lyric-row.romanized .word {
+  background-color: var(--color-medium);
   color: var(--color-text);
   padding: 0.4rem 0.7rem;
   font-weight: 600;
   font-size: 0.9rem;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .lyric-row.translation .word {
   background-color: var(--color-bg);
-  color: var(--color-dark-gray);
+  color: var(--color-dark-accent);
   padding: 0.4rem 0.7rem;
   font-size: 0.85rem;
-  border: 1px solid var(--color-medium-gray);
-  border-radius: 3px;
+  border: 1px solid var(--color-medium);
+  border-radius: 4px;
 }
 
 .lyric-row.english {
   margin-top: 0.6rem;
-  padding: 0.8rem;
+  padding: 0.9rem;
   background-color: var(--color-bg);
-  border-left: 4px solid var(--color-dark-gray);
+  border-left: 4px solid var(--color-accent);
   font-style: italic;
-  color: var(--color-dark-gray);
+  color: var(--color-dark-accent);
   font-size: 0.95rem;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 /* Footer */
 footer {
-  background-color: var(--color-light-gray);
+  background-color: var(--color-light);
+  border-top: 2px solid var(--color-medium);
   padding: 2rem;
   margin-top: 4rem;
   text-align: center;
   font-size: 0.85rem;
-  color: var(--color-dark-gray);
+  color: var(--color-dark-accent);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   body {
-    font-size: 15px;
+    font-size: 16px;
   }
   
   .hero h1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
   
   .segments-grid {
@@ -413,7 +488,8 @@ footer {
     gap: 0.3rem;
   }
   
-  .lyric-row.original .word,
+  .lyric-row.original-script .word,
+  .lyric-row.romanized .word,
   .lyric-row.translation .word {
     font-size: 0.8rem;
     padding: 0.3rem 0.5rem;

@@ -6,6 +6,7 @@ lyricist: "Traditional"
 singers: ["Various Artists"]
 year: 1944
 language: "Italian"
+script: "Latin"
 related_artists: ["Italian Partisans", "Modena City Ramblers"]
 listen_links:
   - platform: "Spotify"
@@ -16,47 +17,25 @@ listen_links:
     url: "https://music.apple.com/example"
 lyrics:
   - words:
-      - original: "Una"
+      - romanized: "Una"
         translation: "One"
-      - original: "mattina"
+      - romanized: "mattina"
         translation: "morning"
-      - original: "mi"
+      - romanized: "mi"
         translation: "I"
-      - original: "son"
+      - romanized: "son"
         translation: "am"
-      - original: "svegliato"
+      - romanized: "svegliato"
         translation: "woken"
     english_line: "One morning I woke up"
   - words:
-      - original: "O"
+      - romanized: "O"
         translation: "Oh"
-      - original: "bella"
+      - romanized: "bella"
         translation: "beautiful"
-      - original: "ciao"
+      - romanized: "ciao"
         translation: "goodbye"
-      - original: "bella"
-        translation: "beautiful"
-      - original: "ciao"
-        translation: "goodbye"
-      - original: "bella"
-        translation: "beautiful"
-      - original: "ciao"
-        translation: "goodbye"
-      - original: "ciao"
-        translation: "goodbye"
-      - original: "ciao"
-        translation: "goodbye"
-    english_line: "Oh beautiful goodbye, beautiful goodbye, beautiful goodbye, goodbye, goodbye"
-  - words:
-      - original: "E"
-        translation: "And"
-      - original: "ho"
-        translation: "I-have"
-      - original: "trovato"
-        translation: "found"
-      - original: "l'invasor"
-        translation: "the-invader"
-    english_line: "And I found the invader"
+    english_line: "Oh beautiful goodbye"
 ---
 
-"Bella Ciao" is one of the most famous Italian folk songs, adopted as an anthem of the anti-fascist resistance...
+"Bella Ciao" is one of the most famous Italian folk songs, adopted as an anthem

@@ -5,14 +5,25 @@
 </div>
 
 <div class="segments-grid">
-    {{ range (where .Site.Pages "Section" "segments") }}
-        {{ if eq .Kind "section" }}
-        <div class="segment-card">
-            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    {{ $segments := where .Site.RegularPages "Section" "segments" }}
+    {{ $segmentGroups := dict }}
+    
+    {{ range $segments }}
+        {{ $parent := .Parent }}
+        {{ if $parent }}
+            {{ $parentPath := $parent.RelPermalink }}
+            {{ if not (index $segmentGroups $parentPath) }}
+                {{ $segmentGroups = merge $segmentGroups (dict $parentPath $parent) }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+    
+    {{ range $segmentGroups }}
+        <a href="{{ .RelPermalink }}" class="segment-card">
+            <h2>{{ .Title }}</h2>
             <p>{{ .Params.description }}</p>
             <span class="episode-count">{{ len .Pages }} episodes</span>
-        </div>
-        {{ end }}
+        </a>
     {{ end }}
 </div>
 {{ end }}

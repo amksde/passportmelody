@@ -1,4 +1,6 @@
 {{ define "main" }}
+{{ partial "breadcrumbs.html" . }}
+
 <div class="segment-header">
     <h1>{{ .Title }}</h1>
     <p>{{ .Params.description }}</p>
@@ -6,14 +8,16 @@
 
 <div class="episodes-list">
     {{ range .Pages }}
-    <article class="episode-card">
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <a href="{{ .RelPermalink }}" class="episode-card">
+        <h2>{{ .Title }}</h2>
         <p class="episode-date">{{ .Date.Format "January 2, 2006" }}</p>
-        <p>{{ .Summary }}</p>
-        {{ if .Params.songs }}
-        <p class="song-count">{{ len .Params.songs }} songs featured</p>
+        {{ with .Summary }}
+        <p>{{ . }}</p>
         {{ end }}
-    </article>
+        {{ if .Params.songs }}
+        <span class="song-count">{{ len .Params.songs }} songs featured</span>
+        {{ end }}
+    </a>
     {{ end }}
 </div>
 {{ end }}

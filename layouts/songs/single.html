@@ -1,4 +1,6 @@
 {{ define "main" }}
+{{ partial "breadcrumbs.html" . }}
+
 <article class="song-page">
     <header class="song-header">
         <h1>{{ .Title }}</h1>
@@ -33,6 +35,11 @@
             <dd>{{ . }}</dd>
             {{ end }}
             
+            {{ with .Params.script }}
+            <dt>Script</dt>
+            <dd>{{ . }}</dd>
+            {{ end }}
+            
             {{ with .Params.related_artists }}
             <dt>Related Artists</dt>
             <dd>{{ delimit . ", " }}</dd>
@@ -56,32 +63,35 @@
         <h2>Lyrics{{ if .Params.language }} ({{ .Params.language }}){{ end }}</h2>
         
         {{ if eq .Params.language "English" }}
-        <!-- Simple English lyrics -->
         <div class="lyrics-simple">
             {{ range .Params.lyrics }}
             <p>{{ .line }}</p>
             {{ end }}
         </div>
         {{ else }}
-        <!-- Transliterated lyrics with word-by-word translation -->
         <div class="lyrics-translated">
             {{ range .Params.lyrics }}
             <div class="lyric-block">
-                <!-- Original language words -->
-                <div class="lyric-row original">
+                {{ if .original_script }}
+                <div class="lyric-row original-script">
                     {{ range .words }}
-                    <span class="word">{{ .original }}</span>
+                    <span class="word">{{ .original_script }}</span>
+                    {{ end }}
+                </div>
+                {{ end }}
+                
+                <div class="lyric-row romanized">
+                    {{ range .words }}
+                    <span class="word">{{ .romanized }}</span>
                     {{ end }}
                 </div>
                 
-                <!-- English translation of each word -->
                 <div class="lyric-row translation">
                     {{ range .words }}
                     <span class="word">{{ .translation }}</span>
                     {{ end }}
                 </div>
                 
-                <!-- Reordered English sentence -->
                 <div class="lyric-row english">
                     {{ .english_line }}
                 </div>
