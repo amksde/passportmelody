@@ -1,12 +1,10 @@
-baseURL = "https://passportmelody.com/"
+baseURL = "/"
 languageCode = "en-us"
-title = "PassportMelody - Global Music Discovery"
+title = "Passport Melody"
+
+[taxonomies]
+  tag = "tags"
 
 [params]
-  description = "Discover and explore music from around the world"
-  author = "PassportMelody"
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+  description = "Experience global music"
+  author = "Passport Melody"

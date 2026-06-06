@@ -1,6 +1,6 @@
 {{ define "main" }}
 <section class="home-hero">
-  <p class="home-tagline">All episodes — chronological.</p>
+  <p class="home-tagline">Tagged: <em>{{ .Title }}</em></p>
 </section>
 <section class="episodes-list">
   {{ $sorted := sort .Pages "Params.episode" "desc" }}

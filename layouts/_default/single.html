@@ -1,0 +1,41 @@
+{{ define "main" }}
+<article class="episode-page">
+
+  <header class="episode-header">
+    <div class="episode-header__number">EP. {{ printf "%03d" .Params.episode }}</div>
+    <h1 class="episode-header__title">{{ .Title }}</h1>
+    <p class="episode-header__date">{{ .Date.Format "Monday, 02 January 2006" }}</p>
+    <div class="episode-header__rule"></div>
+  </header>
+
+  <div class="episode-content">
+    {{ .Content }}
+  </div>
+
+  {{ with .Params.tags }}
+  <footer class="episode-footer">
+    <div class="episode-footer__tags">
+      {{ range . }}
+      <span class="tag tag--large">{{ . }}</span>
+      {{ end }}
+    </div>
+  </footer>
+  {{ end }}
+
+  <div class="episode-nav">
+    {{ with .PrevInSection }}
+    <a href="{{ .Permalink }}" class="episode-nav__link episode-nav__link--prev">
+      <span class="episode-nav__dir">← Previous</span>
+      <span class="episode-nav__name">EP. {{ printf "%03d" .Params.episode }} — {{ .Title }}</span>
+    </a>
+    {{ end }}
+    {{ with .NextInSection }}
+    <a href="{{ .Permalink }}" class="episode-nav__link episode-nav__link--next">
+      <span class="episode-nav__dir">Next →</span>
+      <span class="episode-nav__name">EP. {{ printf "%03d" .Params.episode }} — {{ .Title }}</span>
+    </a>
+    {{ end }}
+  </div>
+
+</article>
+{{ end }}

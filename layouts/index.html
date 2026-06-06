@@ -1,29 +1,39 @@
 {{ define "main" }}
-<div class="hero">
-    <h1>Discover Global Music</h1>
-    <p>Your passport to melodies from around the world</p>
-</div>
+<section class="home-hero">
+  <p class="home-tagline">Experience Global Music</p>
+</section>
 
-<div class="segments-grid">
-    {{ $segments := where .Site.RegularPages "Section" "segments" }}
-    {{ $segmentGroups := dict }}
-    
-    {{ range $segments }}
-        {{ $parent := .Parent }}
-        {{ if $parent }}
-            {{ $parentPath := $parent.RelPermalink }}
-            {{ if not (index $segmentGroups $parentPath) }}
-                {{ $segmentGroups = merge $segmentGroups (dict $parentPath $parent) }}
-            {{ end }}
+<section class="episodes-list">
+  {{ $episodes := where .Site.RegularPages "Section" "episodes" }}
+  {{ $sorted := sort $episodes "Params.episode" "desc" }}
+
+  {{ if $sorted }}
+    {{ range $sorted }}
+    <a href="{{ .Permalink }}" class="episode-card">
+      <div class="episode-card__meta">
+        <span class="episode-card__number">EP. {{ printf "%03d" .Params.episode }}</span>
+        <span class="episode-card__date">{{ .Date.Format "02 Jan 2006" }}</span>
+      </div>
+      <div class="episode-card__body">
+        <h2 class="episode-card__title">{{ .Title }}</h2>
+        {{ with .Params.tags }}
+        <div class="episode-card__tags">
+          {{ range . }}
+          <span class="tag">{{ . }}</span>
+          {{ end }}
+        </div>
         {{ end }}
+      </div>
+      <div class="episode-card__arrow" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </div>
+    </a>
     {{ end }}
-    
-    {{ range $segmentGroups }}
-        <a href="{{ .RelPermalink }}" class="segment-card">
-            <h2>{{ .Title }}</h2>
-            <p>{{ .Params.description }}</p>
-            <span class="episode-count">{{ len .Pages }} episodes</span>
-        </a>
-    {{ end }}
-</div>
+  {{ else }}
+    <p class="no-episodes">Episodes coming soon. Stay tuned.</p>
+  {{ end }}
+</section>
 {{ end }}
