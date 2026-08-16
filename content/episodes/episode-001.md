@@ -1,27 +1,29 @@
 ---
-title: "Where It All Begins"
+title: "Greece | Michalis Violaris"
 episode: 1
-date: 2025-01-05
-tags: ["world music", "debut", "roots", "diverse"]
+date: 2026-06-06
+tags: ["greece", "debut", "violaris", "cyprus"]
 ---
 
-Every journey needs a first step. This one starts wide — an episode that maps the territory of what Passport Melody intends to be. Ten pieces from ten very different places, connected only by the fact that they stopped me in my tracks the first time I heard them.
+Today we venture into Cypriot music. We focus on Michalis Violaris - a popular singer and composer from the 70s era.
+I came to know about him while watching a video that traced the origins of [Mehbooba](https://youtu.be/Nl9-rpuwp3E) - a popular Bollywood song.
 
-No theme. No rules. Just the beginning.
+You can find a lot of his work through [this YouTube topic](https://www.youtube.com/channel/UCL7wG206e6nxc9Tv1Hc-_yw). A lot of these songs seem to use a common instrument - a [Lavouto](http://www.greekfolkmusicanddance.com/instruments.php) alongwith a pretty fast pace music.
 
-### This Week's Ten
+### Let's get right into it!
 
-1. [Gnawa Music of Marrakesh — Maâlem Mahmoud Guinia](https://www.youtube.com/watch?v=example1)
-2. [Hoppípolla — Sigur Rós](https://www.youtube.com/watch?v=example2)
-3. [Raga Bhairavi — Ravi Shankar](https://www.youtube.com/watch?v=example3)
-4. [Chega de Saudade — João Gilberto](https://www.youtube.com/watch?v=example4)
-5. [Tuvan Throat Singing — Huun-Huur-Tu](https://www.youtube.com/watch?v=example5)
-6. [Ballade Pour Adeline — Richard Clayderman](https://www.youtube.com/watch?v=example6)
-7. [Gamelan Gong Kebyar — Gong Kebyar of Peliatan](https://www.youtube.com/watch?v=example7)
-8. [Alvorada — Egberto Gismonti](https://www.youtube.com/watch?v=example8)
-9. [Sakura Sakura — Koto arrangement](https://www.youtube.com/watch?v=example9)
-10. [Desert Rose — Sting & Cheb Mami](https://www.youtube.com/watch?v=example10)
+1. Ta Rialia [[YT Music]](https://music.youtube.com/watch?v=Nf_Wu-DDwZw) [[Lyrics & Translation]](https://lyricstranslate.com/en/Ta-rialia-money.html)
+2. To Delfinokoritso [[YT Music]](https://music.youtube.com/watch?v=2jjY84BC-bY) [[Lyrics & Translation]](https://lyricstranslate.com/en/%CF%84%CE%BF-%CE%B4%CE%B5%CE%BB%CF%86%CE%B9%CE%BD%CE%BF%CE%BA%CF%8C%CF%81%CE%B9%CF%84%CF%83%CE%BF-dolphin-girl.html)
+3. Tillyrkotissa [[YT Music]](https://music.youtube.com/watch?v=ZSNJi0zda6I) [[Lyrics & Translation]](https://lyricstranslate.com/en/%CF%84%CE%B7%CE%BB%CE%BB%CF%85%CF%81%CE%BA%CF%8E%CF%84%CE%B9%CF%83%CF%83%CE%B1-tillirkotissa-girl-tilliria.html)
+4. Mavromallousa Kopelia [[YT Music]](https://music.youtube.com/watch?v=2y4ts6z-JDE) [[Lyrics]](https://lyricstranslate.com/en/michalis-violaris-mavromallousa-kopelia-lyrics.html)
+5. Na Tis Peite Kapetanioi Hairetismata [[YT Music]](https://music.youtube.com/watch?v=iGxzZIVX72M) [[Lyrics]](https://kithara.to/stixoi/NjU3NDA1NzQx/oi-kapetanioi-na-tis-biolaris-mixalis-lyrics)
+6. Halalin Tou [[YT Music]](https://music.youtube.com/watch?v=it_CdUuGbIE) [[Lyrics & Translation]](https://lyricstranslate.com/en/%CE%BF%CF%8D%CE%BB%CE%BB%CE%B1-%CF%87%CE%B1%CE%BB%CE%AC%CE%BB%CE%B9%CE%BD-%CF%83%CE%BF%CF%85-oula-halalin-sou-everything-you.html)
+7. Doukou Doukou Mihanaki [[YT Music]](https://music.youtube.com/watch?v=8UzukuzNCNU) <!-- a simple google search will yield lyrics and translations -->
+8. Paraskevoula Zahari [[YT Music]](https://music.youtube.com/watch?v=116FJufvJEs)
+9. Ilie Mou Ilie [[YT Music]](https://music.youtube.com/watch?v=Ar856GzujL8)
+10. Mia Xanthia Apo Ti Mytilini [[YT Music]](https://music.youtube.com/watch?v=kK7b-gcOi8s)
 
-A deliberately eclectic opener. From Marrakesh to Reykjavík, from Varanasi to Rio. This is the world we're travelling through.
-
-Future episodes will go deeper — into a single tradition, a single country, a single voice. But this first one felt like it needed to be a passport itself.
+### Footnotes
+1. Michalis Violaris Greatest Hits - [YT Music Playlist Link](https://music.youtube.com/playlist?list=OLAK5uy_lE2d4vtqdMTuacGq3aDT5NwN0es6TZNYQ&si=Cvimq5QvCxYasNW2)
+2. An interesting read related to ***Ta Rialia*** can be found [here](https://pavlosandronikos.substack.com/p/a-note-on-the-cypriot-song-ta-rialia)
+3. [Greek Folk Instruments](http://www.greekfolkmusicanddance.com/instruments.php)
